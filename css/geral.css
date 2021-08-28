@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+/* 
+    font-family: 'Zilla Slab', serif;
+    font-family: 'Secular One', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+
+    amarelo: #FFD900;
+    branco: #F6F6F6;
+    escuro: #212121;
+    +escuro: #181818;
+    cinza escuro: #3D3D3D;
+    vermelho: #d21826;
+*/
+
+/* HEADER + NAVBAR */
+
+.navbar-header {
+    background-color: #3d3d3d;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    font-size: 1.15rem;
+    color: #FFD900;
+    font-family: 'Zilla Slab', serif;
+    font-weight: bold;
+}
+
+.logo-img-header {
+    height: 80px;
+}
+
+.search-btn {
+    background-color: #FFD900;
+    transition: 0.2s;
+}
+
+.search-btn:hover {
+    filter: invert(15%);
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #3d3d3d;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+.footer-text1 {
+    font-size: 0.90rem;
+}
+
+.footer-text2 {
+    font-size: 0.80rem;
+}
+
+.logo-img-footer {
+    height: 60px;
+}
+
+#rp {
+    font-family: 'Secular One', sans-serif;
+    letter-spacing: 1px;
+    color: #FFD900;
+    text-decoration: none;
+}
+
+/* Botão scroll top */
+
+#scroll-top-btn {
+    display: none;
+    background-color: #FFD900;
+    border: 2px solid black;
+    border-radius: 25px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}

@@ -1,0 +1,66 @@
+.page-container {
+    background-color: #181818;
+    color: white;
+}
+
+.sobre-article {
+    background-color: #212121;
+    border-radius: 6px;
+}
+
+.sobre-titulo {
+    margin-bottom: 0;
+    font-family: 'Secular One', sans-serif;
+}
+
+.sobre-text {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.planos-link {
+    color: #FFD900;
+    font-weight: bold;
+}
+
+.planos-link:hover {
+    text-decoration: none;
+    color: #FFD900;
+}
+
+/* ASIDE - DEV */
+
+.dev-titulo {
+    margin-bottom: 0;
+    font-family: 'Secular One', sans-serif;
+}
+
+.sobre-aside {
+    background-color: #212121;
+    border-radius: 6px;
+}
+
+.dev-img {
+    height: 300px;
+}
+
+.dev-name {
+    color: #d21826;
+    font-family: 'Zilla Slab', serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.dev-text {
+    text-align: start;
+    font-size: 0.9rem;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.socials {
+    font-size: 20px;
+    color: white;
+}
+
+.socials:hover {
+    color: #d21826;
+}

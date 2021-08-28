@@ -1,0 +1,32 @@
+.main-contato {
+    background-color: #181818;
+}
+
+.form-div {
+    background-color: #212121;
+    min-width: 40%;
+}
+
+.obg {
+    font-size: 0.9rem;
+}
+
+.right {
+    border: 2px solid #198754;
+}
+
+.wrong {
+    border: 2px solid #dc3545;
+}
+
+#correct-div {
+    display: none;
+}
+
+#incorrect-div {
+    display: none;
+}
+
+.formulario-title {
+    font-family: 'Secular One', sans-serif;
+}

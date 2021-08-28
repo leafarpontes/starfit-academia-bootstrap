@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/geral.css">
+    <link rel="stylesheet" href="css/contato.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>StarFit | Contato</title>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <nav class="navbar navbar-expand-md navbar-light navbar-header py-0">
+            <a class="navbar-brand" href="index.html"><img class="logo-img-header" src="images/starfit-logo-yellow.png"
+                    alt="starfit logo" title="Voltar para a página inicial"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="container-lg">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link ml-lg-3" href="sobre.html">Sobre Nós</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link ml-lg-3" href="planos.html">Planos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link ml-lg-3" href="contato.html">Contato</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control-sm mr-sm-2" type="search" placeholder="Pesquisa" aria-label="Pesquisa">
+                        <button class="btn btn-sm my-2 my-sm-0 search-btn" type="submit"><i class="bi bi-search"></i></button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-contato d-flex justify-content-center align-items-center text-white flex-column">
+        <h1 class="mt-4 text-center formulario-title">Formulário de contato</h1>
+        <div class="form-div p-4 rounded mt-3 mb-5">
+            <form>
+                <div class="form-group">
+                    <label for="nome">Nome*</label>
+                    <input type="text" id="nome" class="form-control" placeholder="João da Silva">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail*</label>
+                    <input type="email" id="email" class="form-control" placeholder="exemplo@mail.com">
+                </div>
+                <div class="form-group">
+                    <label for="numero">Número de telefone/celular*</label>
+                    <input type="text" id="numero" class="form-control" placeholder="Somente números (com DDD)">
+                </div>
+                <div class="form-group">
+                    <label for="assunto">Assunto*</label>
+                    <input type="text" id="assunto" class="form-control" placeholder="Dúvidas? Sugestões?">
+                </div>
+                <div class="form-group">
+                    <label for="msg">Mensagem*</label>
+                    <textarea class="form-control" name="msg" id="msg"></textarea>
+                </div>
+                <p class="obg">Campos obrigatórios estão marcados com *</p>
+
+                <input class="btn btn-sm btn-success font-weight-bold" id="btn-enviar" type="button" value="Enviar">
+
+                <div class="alert alert-success mt-3" id="correct-div" role="alert">
+                    Mensagem enviada!
+                </div>
+                <div class="alert alert-danger mt-3" id="incorrect-div" role="alert">
+                    Por favor, preencha os campos corretamente.
+                </div>
+            </form>
+        </div>
+        <button id="scroll-top-btn"><i class="bi bi-arrow-up-circle"></i></button>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <a href="index.html"><img class="logo-img-footer" src="images/starfit-logo-yellow.png" alt="starfit logo"
+                title="Home"></a>
+        <p class="footer-text1">Rua Clotilde, Nº 71 - Vila do Chaves, SP</p>
+        <p class="footer-text2">StarFit &copy;2021 - Todos os direitos reservados.</p>
+        <p class="footer-text2">Desenvolvido por <a id="rp" href="https://github.com/leafarpontes" target="_blank">Rafael Pontes</a></p>
+    </footer>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+    <script src="js/geral.js"></script>
+    <script src="js/contato.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,78 @@
+.sec-escolha-plano {
+    background-color: #181818;
+    padding: 20px 0 20px 0;
+}
+
+.sec-escolha-plano h1 {
+    margin-bottom: 0;
+    color: white;
+    font-family: 'Zilla Slab', serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+}
+
+
+/* CARDS - PLANOS */
+
+.card-container {
+    background-color: #181818;
+}
+
+.card-div {
+    background-color: #212121;
+    color: white;
+}
+
+.titulo-card {
+    font-family: 'Zilla Slab', serif;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.lista-planos {
+    list-style: none;
+    padding: 0;
+    line-height: 2.2;
+}
+
+.yellow-text {
+    color: #ffd900;
+}
+
+.red-text {
+    color: #d21826;
+}
+
+.basic-btn {
+    background-color: white;
+    font-weight: 700;
+    font-family: 'Noto Sans', sans-serif;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+
+.cross-btn {
+    background-color: #ffd900;
+    font-weight: 700;
+    font-family: 'Noto Sans', sans-serif;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+
+.pro-btn {
+    background-color: #d21826;
+    font-weight: 700;
+    font-family: 'Noto Sans', sans-serif;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+
+.basic-btn:hover, .cross-btn:hover, .pro-btn:hover {
+    transition: 0.4s;
+    background-color: black;
+    color: white;
+}

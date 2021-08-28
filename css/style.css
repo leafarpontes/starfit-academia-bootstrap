@@ -1,0 +1,82 @@
+/* MAIN */
+
+.sec-banner {
+    /* background-color: black; */
+    /* opacity: 100%; */
+    height: 400px;
+    background-image: url(../images/pexels-scott-webb-28061.jpg), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 40%;
+}
+
+.banner-text {
+    color: #F6F6F6;
+    font-family: 'Secular One', sans-serif;
+    font-size: 3.25rem;
+}
+
+.sec-planos {
+    background-color: #181818;
+}
+
+.planos-text a {
+    color: #FFD900;
+    text-decoration: none;
+    font-size: 2.8rem;
+    font-family: 'Secular One', sans-serif;
+}
+
+.planos-text:hover, .planos-text a:hover {
+    transform: scale(1.1, 1.1);
+    transition: 0.5s;
+    color: #F6F6F6;
+}
+
+.sec-carousel {
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: #181818;
+}
+
+.carousel-text {
+    color: #FFD900;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+}
+
+.carousel-text a {
+    color: white;
+    text-decoration: none;
+}
+
+.carousel-text a:hover {
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.carousel-img {
+    opacity: 75%;
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    );
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) { 
+    .planos-text a {
+        font-size: 2rem;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {  }
+
+ /* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {  }
+
+ /* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {  }
