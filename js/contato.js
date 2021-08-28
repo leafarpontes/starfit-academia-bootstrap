@@ -1,18 +1,49 @@
-function validaNome(field) {
+const nomeInput = document.getElementById('nome');
+const emailInput = document.getElementById('email');
+const numeroInput = document.getElementById('numero');
+const assuntoInput = document.getElementById('assunto');
+const msgInput = document.getElementById('msg');
+const botaoEnviar = document.getElementById('btn-enviar');
+const correctDiv = document.getElementById('correct-div');
+const incorrectDiv = document.getElementById('incorrect-div');
+
+// variaveis de controle de validação
+let nomeOk, emailOk, numeroOk, assuntoOk, msgOk;
+
+nomeInput.addEventListener('keyup', validaNome);
+emailInput.addEventListener('keyup', validaEmail);
+numeroInput.addEventListener('keyup', validaNumero);
+assuntoInput.addEventListener('keyup', validaAssunto);
+msgInput.addEventListener('keyup', validaMsg);
+botaoEnviar.addEventListener('click', validaFormulario);
+
+function correctInput(x) {
+    x.classList.add("correct");
+    x.classList.remove("wrong");
+}
+
+function wrongInput(x) {
+    x.classList.add("wrong");
+    x.classList.remove("correct");
+}
+
+function validaNome() {
     let letras = /^[a-zA-Z\s]*$/;
-    let nome = field.value;
+    let nome = this.value;
 
     if (nome.match(letras) && nome != "") {
-        return true;
+        correctInput(this);
+        nomeOk = true;
     }
     else {
-        return false;
+        wrongInput(this);
+        nomeOk = false;
     }
 }
 
-function validaEmail(field) {
-    usuario = field.value.substring(0, field.value.indexOf("@"));
-    dominio = field.value.substring(field.value.indexOf("@")+ 1, field.value.length);
+function validaEmail() {
+    usuario = this.value.substring(0, this.value.indexOf("@"));
+    dominio = this.value.substring(this.value.indexOf("@")+ 1, this.value.length);
     if ((usuario.length >=1) &&
         (dominio.length >=3) &&
         (usuario.search("@")==-1) &&
@@ -22,104 +53,58 @@ function validaEmail(field) {
         (dominio.search(".")!=-1) &&
         (dominio.indexOf(".") >=1) &&
         (dominio.lastIndexOf(".") < dominio.length - 1)) {
-            return true;
+            correctInput(this);
+            emailOk = true;
     }
     else{
-        return false;
+        wrongInput(this);
+        emailOk = false;
     }
 }
 
-function validaNumero(field) {
-    num = field.value;
+function validaNumero() {
+    numRegEx = /^[(][0-9]{2}[)]\s?[0-9]{4,5}[-][0-9]{4}$/;
+    num = this.value;
 
-    if (!isNaN(num) && num != "" && num.length == 11) {
-        return true;
+    if (num.match(numRegEx) && num != "") {
+        correctInput(this);
+        numeroOk = true;
     }
     else {
-        return false;
+        wrongInput(this);
+        numeroOk = false;
     }
 }
 
-function validaVazio(field) {
-
-    if (field.value != "") {
-        return true;
+function validaAssunto() {
+    if (this.value != "") {
+        correctInput(this);
+        assuntoOk = true;
     }
     else {
-        return false;
+        wrongInput(this);
+        assuntoOk = false;
     }
 }
 
-$(function() {
-    $("#nome").focusout(function() {
-        if (validaNome(this)) {
-            $(this).addClass("right");
-            $(this).removeClass("wrong");
-        }
-        else {
-            $(this).addClass("wrong");
-            $(this).removeClass("right");
-        }
-    })
-})
+function validaMsg() {
+    if (this.value != "") {
+        correctInput(this);
+        msgOk = true;
+    }
+    else {
+        wrongInput(this);
+        msgOk = false;
+    }
+}
 
-$(function() {
-    $("#email").focusout(function() {
-        if (validaEmail(this)) {
-            $(this).addClass("right");
-            $(this).removeClass("wrong");
-        }
-        else {
-            $(this).addClass("wrong");
-            $(this).removeClass("right");
-        }
-    })
-})
-
-$(function() {
-    $("#numero").focusout(function() {
-        if (validaNumero(this)) {
-            $(this).addClass("right");
-            $(this).removeClass("wrong");
-        }
-        else {
-            $(this).addClass("wrong");
-            $(this).removeClass("right");
-        }
-    })
-})
-
-$(function() {
-    $("#assunto, #msg").focusout(function() {
-        if (validaVazio(this)) {
-            $(this).addClass("right");
-            $(this).removeClass("wrong");
-        }
-        else {
-            $(this).addClass("wrong");
-            $(this).removeClass("right");
-        }
-    })
-})
-
-$(function() {
-    $("#btn-enviar").click(function() {
-        let nomeInput = document.getElementById('nome');
-        let emailInput = document.getElementById('email');
-        let numeroInput = document.getElementById('numero');
-        let assuntoInput = document.getElementById('assunto');
-        let msgInput = document.getElementById('msg');
-
-        let correctDiv = $("#correct-div");
-        let incorrectDiv = $("#incorrect-div");
-        if (validaNome(nomeInput) && validaEmail(emailInput) && validaNumero(numeroInput)
-            && validaVazio(assuntoInput) && validaVazio(msgInput)) {
-            correctDiv.css({"display": "block"});
-            incorrectDiv.css({"display": "none"});
-        }
-        else {
-            incorrectDiv.css({"display": "block"});
-            correctDiv.css({"display": "none"});
-        }
-    })
-})
+function validaFormulario() {
+    if (nomeOk && emailOk && numeroOk && assuntoOk && msgOk) {
+        correctDiv.style.display = "block";
+        incorrectDiv.style.display = "none";
+    }
+    else {
+        incorrectDiv.style.display = "block";
+        correctDiv.style.display = "none";
+    }
+}
